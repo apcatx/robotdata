@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Staffing Directory</title>
+  <link rel="stylesheet" href="main.css"/>
+</head>
+
+<body>
+  <h1>Index of RoboNerds</h1>
+
+  <div class = "indexwrapper">
+    <div>
+      {{ #staff }}
+        <img src="{{ avatar }}">
+        <h2>{{ name }}</h2>
+        <div>
+          {{ #job }} {{ job }}, {{ /job }}
+          {{ ^job }}<p>Available for hire</p>{{ /job }}
+          {{ company }}
+        </div>
+      {{ /staff }}
+  </div>
+  </div>
+
+</body>
+
+</html>

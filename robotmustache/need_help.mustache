@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Staffing Directory</title>
+  <link rel="stylesheet" href="main.css"/>
+</head>
+
+<body>
+  <h1>RoboNerds looking for Human jobs</h1>
+  <div>
+    {{ #staff }}
+    <div>
+      <img src="{{ avatar }}">
+    </div>
+    <h1>{{ name }}</h1>
+    <div>
+      <p>{{ #address.city }}{{ address.city }},{{ /address.city }} {{ address.country }} | {{ #job }} {{ job }}, {{ /job }} {{ ^job }}Available for hire{{ /job }} {{ company }}</p>
+    </div>
+    <div>
+      <p>{{ email }} | {{ phone }}</p>
+    </div>
+    <div>
+      <h4>Education</h4>
+    </div>
+    <div>
+      <p>{{ university }}</p>
+    </div>
+    <div>
+      <h4>Skills</h4>
+    </div>
+    {{ #skills }}
+    <div>
+      <ul>
+        <li>{{ . }}</li>
+      </ul>
+    </div>
+    {{ /skills }} {{ /staff }}
+
+  </div>
+
+</body>
+
+</html>
