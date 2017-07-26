@@ -1,3 +1,27 @@
-/*.index {
-  border: 2px solid black;
-}*/
+.indexwrapper {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile {
+  display: inline-block;
+  border: 1px solid grey;
+  padding: 20px;
+  width: 200px;
+  height: auto;
+  margin: 20px;
+}
+
+h2 {
+  color: cornflowerblue;
+}
+
+.available {
+  color: red;
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+}

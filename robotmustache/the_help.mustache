@@ -11,17 +11,16 @@
   <h1>Index of RoboNerds</h1>
 
   <div class = "indexwrapper">
-    <div>
       {{ #staff }}
-        <img src="{{ avatar }}">
+    <div class = "profile">
+        <div class = "photo"><img src="{{ avatar }}"></div>
         <h2>{{ name }}</h2>
-        <div>
-          {{ #job }} {{ job }}, {{ /job }}
-          {{ ^job }}<p>Available for hire</p>{{ /job }}
-          {{ company }}
-        </div>
+        <p>{{ #job }} {{ job }}, {{ /job }}
+          {{ ^job }}<p class = "available">Available for hire</p>{{ /job }}
+          {{ company }}</p>
+    </div>
       {{ /staff }}
-  </div>
+
   </div>
 
 </body>
