@@ -8,17 +8,20 @@
 </head>
 
 <body>
-  <h1>Index of RoboNerds</h1>
+  <h1 class="header">Index of RoboNerds</h1>
 
-  <div class = "indexwrapper">
+  <div class = "indexwrap">
       {{ #staff }}
-    <div class = "profile">
-        <div class = "photo"><img src="{{ avatar }}"></div>
+      <div class="profile">
+        <a href="/{{ username }}"/>
+        <div class = "photo">
+          <img src="{{ avatar }}">
+        </div>
         <h2>{{ name }}</h2>
         <p>{{ #job }} {{ job }}, {{ /job }}
           {{ ^job }}<p class = "available">Available for hire</p>{{ /job }}
           {{ company }}</p>
-    </div>
+        </div></a>
       {{ /staff }}
 
   </div>

@@ -8,35 +8,34 @@
 </head>
 
 <body>
-  <h1>RoboNerds looking for Human jobs</h1>
+  <h1 class="header">RoboNerds looking for Human jobs</h1>
   <div class = "needwrapper">
     {{ #staff }}
-    <div class = "needphoto">
-      <img src="{{ avatar }}">
+    <div class="upperwrapper">
+      <div><img src="{{ avatar }}" class="needphoto"></div>
+      <div class="info">
+        <span><h1>{{ name }}</h1></span>
+        <span><p>{{ #address.city }}{{ address.city }},{{ /address.city }} {{ address.country }} | {{ #job }} {{ job }}, {{ /job }} {{ ^job }} <span class= "available"> Available for hire</span>{{ /job }} {{ company }}</p></span>
+        <span><p>{{ email }} | {{ phone }}</p></span>
+      </div>
     </div>
-    <h1>{{ name }}</h1>
-    <div>
-      <span>{{ #address.city }}{{ address.city }},{{ /address.city }} {{ address.country }} | {{ #job }} {{ job }}, {{ /job }} {{ ^job }}<p class = "available">Available for hire</p>{{ /job }} {{ company }}</span>
-    </div>
-    <div>
-      <p>{{ email }} | {{ phone }}</p>
-    </div>
-    <div>
+  <div class="bottomwrapper">
+    <div class="category">
+      <span>
       <h4>Education</h4>
-    </div>
-    <div>
-      <p>{{ university }}</p>
-    </div>
-    <div>
       <h4>Skills</h4>
+    </span>
     </div>
-    {{ #skills }}
-    <div>
+    <div class="attributes">
+      <p>{{ university }}</p>
+      {{ #skills }}
       <ul>
         <li>{{ . }}</li>
       </ul>
+      {{ /skills }}
     </div>
-    {{ /skills }} {{ /staff }}
+  </div>
+    {{ /staff }}
 
   </div>
 
